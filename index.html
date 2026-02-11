@@ -1,0 +1,1033 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Humane Design Patterns — A Pattern Language for Respectful Technology</title>
+  <meta name="description" content="A curated collection of design patterns for technology that respects attention, autonomy, and wellbeing. The inverse of dark patterns.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='40' fill='%234a9e8e'/></svg>">
+</head>
+<body>
+
+  <!-- ======== Header ======== -->
+  <header class="header">
+    <div class="header-inner">
+      <a href="#" class="header-brand">
+        <div class="header-logo"></div>
+        <span class="header-title">Humane Design Patterns</span>
+      </a>
+      <nav class="header-nav">
+        <a href="#patterns">Patterns</a>
+        <a href="#principles">Principles</a>
+        <a href="#reading">Reading</a>
+        <span class="header-count" id="pattern-count">42 patterns</span>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ======== Hero ======== -->
+  <section class="hero">
+    <div class="hero-label">A Pattern Language for Respectful Technology</div>
+    <h1 class="hero-headline">
+      Design patterns that respect<br>
+      <strong>attention, autonomy, and wellbeing</strong>
+    </h1>
+    <p class="hero-description">
+      Technology shapes behavior. These 42 patterns describe how to build products and interfaces that serve people rather than exploit them -- the bright inverse of dark patterns.
+    </p>
+  </section>
+
+  <!-- ======== Principles ======== -->
+  <section class="principles-section" id="principles">
+    <div class="principles-header">
+      <h2 class="section-title">Seven Principles</h2>
+      <p class="section-subtitle">The foundations that every humane design pattern builds upon</p>
+    </div>
+    <div class="principles-grid">
+      <div class="principle-card" data-principle="respectful">
+        <div class="principle-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+        </div>
+        <h3>Respectful</h3>
+        <p>Prioritize people's time, attention, and digital wellbeing. Match delivery to urgency. Adapt to context.</p>
+      </div>
+      <div class="principle-card" data-principle="empowering">
+        <div class="principle-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+        </div>
+        <h3>Empowering</h3>
+        <p>Put people in control of their experience. Enable management of algorithms, privacy, and usage patterns.</p>
+      </div>
+      <div class="principle-card" data-principle="finite">
+        <div class="principle-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </div>
+        <h3>Finite</h3>
+        <p>Set boundaries on engagement. Signal when content ends. Replace infinite with intentional.</p>
+      </div>
+      <div class="principle-card" data-principle="transparent">
+        <div class="principle-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+        </div>
+        <h3>Transparent</h3>
+        <p>Be clear about intentions, honest in actions, and free of dark patterns. Show what data is collected and why.</p>
+      </div>
+      <div class="principle-card" data-principle="intentional">
+        <div class="principle-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+        </div>
+        <h3>Intentional</h3>
+        <p>Employ friction to prevent misuse. Direct people toward healthier digital behaviors. Prioritize lasting over immediate.</p>
+      </div>
+      <div class="principle-card" data-principle="inclusive">
+        <div class="principle-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
+        <h3>Inclusive</h3>
+        <p>Design for the full range of human diversity. Build for disabilities first. Give users control over how they interact.</p>
+      </div>
+      <div class="principle-card" data-principle="resilient">
+        <div class="principle-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <h3>Resilient</h3>
+        <p>Prioritize wellbeing of vulnerable users. Anticipate misuse. Design for edge cases, not just the happy path.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== Filter Bar ======== -->
+  <section class="filter-section" id="patterns">
+    <div class="filter-header">
+      <h2 class="section-title">Pattern Library</h2>
+      <p class="section-subtitle">Concrete patterns for building technology that respects people</p>
+    </div>
+    <div class="filter-bar">
+      <span class="filter-label">Filter</span>
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="attention">Attention</button>
+      <button class="filter-btn" data-filter="friction">Friction</button>
+      <button class="filter-btn" data-filter="autonomy">Autonomy</button>
+      <button class="filter-btn" data-filter="transparency">Transparency</button>
+      <button class="filter-btn" data-filter="boundaries">Boundaries</button>
+      <button class="filter-btn" data-filter="safety">Safety</button>
+      <button class="filter-btn" data-filter="calm">Calm</button>
+      <span class="filter-result-count">42 patterns</span>
+    </div>
+  </section>
+
+  <!-- ======== Pattern Grid ======== -->
+  <section class="grid-section">
+    <div class="pattern-grid">
+
+      <!-- ===== ATTENTION PATTERNS ===== -->
+
+      <article class="pattern-card" data-category="attention">
+        <div class="card-body">
+          <div class="card-meta">
+            <span class="card-category-tag">Attention</span>
+            <span class="card-principle-tag" data-principle="respectful">Respectful</span>
+          </div>
+          <h3 class="card-name">Finite Feed</h3>
+          <p class="card-description">Replace infinite scroll with content that has a clear end. Show an "all caught up" indicator when users reach the latest content, giving them a natural exit point.</p>
+          <div class="card-detail">
+            <span class="detail-label">Inverts</span>
+            <span class="detail-value">Infinite scroll, bottomless feeds</span>
+          </div>
+          <div class="card-detail">
+            <span class="detail-label">Used by</span>
+            <span class="detail-value">Instagram (partially), LinkedIn, Are.na</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="pattern-card" data-category="attention">
+        <div class="card-body">
+          <div class="card-meta">
+            <span class="card-category-tag">Attention</span>
+            <span class="card-principle-tag" data-principle="finite">Finite</span>
+          </div>
+          <h3 class="card-name">Manual Load</h3>
+          <p class="card-description">Require explicit user action to load more content. Replace auto-loading with a deliberate "Load More" button that preserves the user's sense of where they are.</p>
+          <div class="card-detail">
+            <span class="detail-label">Inverts</span>
+            <span class="detail-value">Auto-refresh, pre-fetching, endless pagination</span>
+          </div>
+          <div class="card-detail">
+            <span class="detail-label">Used by</span>
+            <span class="detail-value">Hacker News, many RSS readers</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="pattern-card" data-category="attention">
+        <div class="card-body">
+          <div class="card-meta">
+            <span class="card-category-tag">Attention</span>
+            <span class="card-principle-tag" data-principle="respectful">Respectful</span>
+          </div>
+          <h3 class="card-name">Conscious Autoplay</h3>
+          <p class="card-description">Never auto-play media without explicit consent. Require a deliberate user action before video or audio begins. Respect that attention is not yours to take.</p>
+          <div class="card-detail">
+            <span class="detail-label">Inverts</span>
+            <span class="detail-value">Auto-playing videos, auto-advancing episodes</span>
+          </div>
+          <div class="card-detail">
+            <span class="detail-label">Used by</span>
+            <span class="detail-value">Safari (default), Firefox, most accessibility tools</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="pattern-card" data-category="attention">
+        <div class="card-body">
+          <div class="card-meta">
+            <span class="card-category-tag">Attention</span>
+            <span class="card-principle-tag" data-principle="empowering">Empowering</span>
+          </div>
+          <h3 class="card-name">Demetrication</h3>
+          <p class="card-description">Remove or hide vanity metrics (likes, follower counts, view numbers) that create social comparison anxiety and compulsive checking. Let content stand on its own merit.</p>
+          <div class="card-detail">
+            <span class="detail-label">Inverts</span>
+            <span class="detail-value">Like counts, follower displays, viral metrics</span>
+          </div>
+          <div class="card-detail">
+            <span class="detail-label">Used by</span>
+            <span class="detail-value">Instagram (optional), Demetricator extension, Are.na</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="pattern-card" data-category="attention">
+        <div class="card-body">
+          <div class="card-meta">
+            <span class="card-category-tag">Attention</span>
+            <span class="card-principle-tag" data-principle="respectful">Respectful</span>
+          </div>
+          <h3 class="card-name">Aesthetic Dampening</h3>
+          <p class="card-description">Reduce visual stimulation to lower dopaminergic pull. Use grayscale modes, muted thumbnails, and subdued color palettes to make interfaces less compulsive.</p>
+          <div class="card-detail">
+            <span class="detail-label">Inverts</span>
+            <span class="detail-value">Bright notification badges, eye-catching thumbnails, red counters</span>
+          </div>
+          <div class="card-detail">
+            <span class="detail-label">Used by</span>
+            <span class="detail-value">iOS grayscale mode, DF YouTube, One Sec</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="pattern-card" data-category="attention">
+        <div class="card-body">
+          <div class="card-meta">
+            <span class="card-category-tag">Attention</span>
+            <span class="card-principle-tag" data-principle="finite">Finite</span>
+          </div>
+          <h3 class="card-name">Session Boundary</h3>
+          <p class="card-description">Create natural stopping points within a usage session. Offer "take a break" prompts, session summaries, or "you've been here for X minutes" notices that gently close the loop.</p>
+          <div class="card-detail">
+            <span class="detail-label">Inverts</span>
+            <span class="detail-value">Variable ratio reinforcement, "just one more" loops</span>
+          </div>
+          <div class="card-detail">
+            <span class="detail-label">Used by</span>
+            <span class="detail-value">YouTube (take a break), Apple Screen Time, TikTok (partially)</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- ===== FRICTION PATTERNS ===== -->
+
+      <article class="pattern-card" data-category="friction">
+        <div class="card-body">
+          <div class="card-meta">
+            <span class="card-category-tag">Friction</span>
+            <span class="card-principle-tag" data-principle="intentional">Intentional</span>
+          </div>
+          <h3 class="card-name">Intent Verification</h3>
+          <p class="card-description">Before opening an addictive app or service, ask the user why they want to use it. A brief moment of reflection creates space between impulse and action.</p>
+          <div class="card-detail">
+            <span class="detail-label">Inverts</span>
+            <span class="detail-value">Frictionless access, one-tap launches</span>
+          </div>
+          <div class="card-detail">
+            <span class="detail-label">Used by</span>
+            <span class="detail-value">One Sec, ScreenZen, Intention browser extension</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="pattern-card" data-category="friction">
+        <div class="card-body">
+          <div class="card-meta">
+            <span class="card-category-tag">Friction</span>
+            <span class="card-principle-tag" data-principle="intentional">Intentional</span>
+          </div>
+          <h3 class="card-name">Cooling-Off Period</h3>
+          <p class="card-description">Introduce a timed delay before granting access to distracting content. "This site will be available in 10 minutes." Impulses fade; intentions persist.</p>
+          <div class="card-detail">
+            <span class="detail-label">Inverts</span>
+            <span class="detail-value">Instant gratification, zero-latency access</span>
+          </div>
+          <div class="card-detail">
+            <span class="detail-label">Used by</span>
+            <span class="detail-value">Delayed Gratification extension, Cold Turkey, Clearspace</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="pattern-card" data-category="friction">
+        <div class="card-body">
+          <div class="card-meta">
+            <span class="card-category-tag">Friction</span>
+            <span class="card-principle-tag" data-principle="intentional">Intentional</span>
+          </div>
+          <h3 class="card-name">Speed Bump</h3>
+          <p class="card-description">Add confirmation dialogs before consequential actions. "Are you sure?" is not hostile UX -- it's protection against the impulsive click, the accidental share, the regretted post.</p>
+          <div class="card-detail">
+            <span class="detail-label">Inverts</span>
+            <span class="detail-value">One-click purchase, instant posting, frictionless sharing</span>
+          </div>
+          <div class="card-detail">
+            <span class="detail-label">Used by</span>
+            <span class="detail-value">Gmail undo send, Twitter reply warnings, banking apps</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="pattern-card" data-category="friction">
+        <div class="card-body">
+          <div class="card-meta">
+            <span class="card-category-tag">Friction</span>
+            <span class="card-principle-tag" data-principle="intentional">Intentional</span>
+          </div>
+          <h3 class="card-name">Graduated Escalation</h3>
+          <p class="card-description">Start with gentle nudges, progress to firm reminders, and only reach hard blocks when softer interventions fail. Treat the user as an ally, not an adversary.</p>
+          <div class="card-detail">
+            <span class="detail-label">Inverts</span>
+            <span class="detail-value">Binary on/off blocking, nuclear lockouts</span>
+          </div>
+          <div class="card-detail">
+            <span class="detail-label">Used by</span>
+            <span class="detail-value">Opal, Freedom (session modes), Digital Wellbeing</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="pattern-card" data-category="friction">
+        <div class="card-body">
+          <div class="card-meta">
+            <span class="card-category-tag">Friction</span>
+            <span class="card-principle-tag" data-principle="empowering">Empowering</span>
+          </div>
+          <h3 class="card-name">Pre-Commitment Lock</h3>
+          <p class="card-description">Allow users to set restrictions on their future self while they have clarity. Schedule focus periods, set daily limits, or lock out apps in advance -- when willpower is high.</p>
+          <div class="card-detail">
+            <span class="detail-label">Inverts</span>
+            <span class="detail-value">Always-available override, easy bypass</span>
+          </div>
+          <div class="card-detail">
+            <span class="detail-label">Used by</span>
+            <span class="detail-value">Cold Turkey, Apple Focus Modes, Beeminder, Freedom</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="pattern-card" data-category="friction">
+        <div class="card-body">
+          <div class="card-meta">
+            <span class="card-category-tag">Friction</span>
+            <span class="card-principle-tag" data-principle="intentional">Intentional</span>
+          </div>
+          <h3 class="card-name">Default Reversal</h3>
+          <p class="card-description">Flip the default from opt-out to opt-in. Instead of needing to resist opening social media, require an active, deliberate choice to access it. Blank home screens. Empty new tabs.</p>
+          <div class="card-detail">
+            <span class="detail-label">Inverts</span>
+            <span class="detail-value">Pre-selected checkboxes, auto-enrolled features, always-on feeds</span>
+          </div>
+          <div class="card-detail">
+            <span class="detail-label">Used by</span>
+            <span class="detail-value">Blank New Tab, Olauncher, Before Launcher, Minimalist Phone</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- ===== AUTONOMY PATTERNS ===== -->
+
+      <article class="pattern-card" data-category="autonomy">
+        <div class="card-body">
+          <div class="card-meta">
+            <span class="card-category-tag">Autonomy</span>
+            <span class="card-principle-tag" data-principle="empowering">Empowering</span>
+          </div>
+          <h3 class="card-name">Algorithm Control</h3>
+          <p class="card-description">Give users direct control over the algorithms shaping their experience. Expose recommendation weights, let people tune their feeds, or offer chronological alternatives.</p>
+          <div class="card-detail">
+            <span class="detail-label">Inverts</span>
+            <span class="detail-value">Opaque recommendation engines, engagement-maximizing feeds</span>
+          </div>
+          <div class="card-detail">
+            <span class="detail-label">Used by</span>
+            <span class="detail-value">Twitter/X (Following tab), Bluesky (custom feeds), YouTube (topic preferences)</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="pattern-card" data-category="autonomy">
+        <div class="card-body">
+          <div class="card-meta">
+            <span class="card-category-tag">Autonomy</span>
+            <span class="card-principle-tag" data-principle="empowering">Empowering</span>
+          </div>
+          <h3 class="card-name">Usage Visibility</h3>
+          <p class="card-description">Show users clear, honest data about their usage patterns. Weekly reports, real-time counters, and ambient awareness indicators that inform without shaming.</p>
+          <div class="card-detail">
+            <span class="detail-label">Inverts</span>
+            <span class="detail-value">Hidden time sinks, invisible engagement tracking</span>
+          </div>
+          <div class="card-detail">
+            <span class="detail-label">Used by</span>
+            <span class="detail-value">Apple Screen Time, RescueTime, Digital Wellbeing, ActivityWatch</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="pattern-card" data-category="autonomy">
+        <div class="card-body">
+          <div class="card-meta">
+            <span class="card-category-tag">Autonomy</span>
+            <span class="card-principle-tag" data-principle="empowering">Empowering</span>
+          </div>
+          <h3 class="card-name">Time Budgeting</h3>
+          <p class="card-description">Let users set daily or weekly time allowances for specific apps or categories. When the budget runs out, access stops -- not as punishment, but as a boundary the user set for themselves.</p>
+          <div class="card-detail">
+            <span class="detail-label">Inverts</span>
+            <span class="detail-value">Unlimited access, "lose track of time" design</span>
+          </div>
+          <div class="card-detail">
+            <span class="detail-label">Used by</span>
+            <span class="detail-value">Apple Screen Time, Android Digital Wellbeing, Opal, Freedom</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="pattern-card" data-category="autonomy">
+        <div class="card-body">
+          <div class="card-meta">
+            <span class="card-category-tag">Autonomy</span>
+            <span class="card-principle-tag" data-principle="empowering">Empowering</span>
+          </div>
+          <h3 class="card-name">Notification Sovereignty</h3>
+          <p class="card-description">Give users granular control over what notifies them, when, and how. Let people batch, schedule, mute, or completely silence notifications per-source and per-context.</p>
+          <div class="card-detail">
+            <span class="detail-label">Inverts</span>
+            <span class="detail-value">Permission-hungry apps, engagement re-activation pings</span>
+          </div>
+          <div class="card-detail">
+            <span class="detail-label">Used by</span>
+            <span class="detail-value">Apple Focus Modes, Android Priority Mode, Hey.com screening</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="pattern-card" data-category="autonomy">
+        <div class="card-body">
+          <div class="card-meta">
+            <span class="card-category-tag">Autonomy</span>
+            <span class="card-principle-tag" data-principle="transparent">Transparent</span>
+          </div>
+          <h3 class="card-name">Easy Exit</h3>
+          <p class="card-description">Make unsubscribing, deleting accounts, and canceling services as easy as signing up. One click to leave, prominently placed -- not buried behind multiple steps.</p>
+          <div class="card-detail">
+            <span class="detail-label">Inverts</span>
+            <span class="detail-value">Roach motel pattern, hidden cancellation, phone-only deletion</span>
+          </div>
+          <div class="card-detail">
+            <span class="detail-label">Used by</span>
+            <span class="detail-value">Apple (required by App Store), GDPR-compliant services</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="pattern-card" data-category="autonomy">
+        <div class="card-body">
+          <div class="card-meta">
+            <span class="card-category-tag">Autonomy</span>
+            <span class="card-principle-tag" data-principle="empowering">Empowering</span>
+          </div>
+          <h3 class="card-name">Human in the Loop</h3>
+          <p class="card-description">For consequential AI decisions, keep a human involved. Show the reasoning, allow overrides, and never let automation silently determine outcomes that matter.</p>
+          <div class="card-detail">
+            <span class="detail-label">Inverts</span>
+            <span class="detail-value">Opaque AI decisions, automated gatekeeping, black-box algorithms</span>
+          </div>
+          <div class="card-detail">
+            <span class="detail-label">Used by</span>
+            <span class="detail-value">EU AI Act requirements, medical AI tools, content moderation appeals</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- ===== TRANSPARENCY PATTERNS ===== -->
+
+      <article class="pattern-card" data-category="transparency">
+        <div class="card-body">
+          <div class="card-meta">
+            <span class="card-category-tag">Transparency</span>
+            <span class="card-principle-tag" data-principle="transparent">Transparent</span>
+          </div>
+          <h3 class="card-name">Data Daylight</h3>
+          <p class="card-description">Show users exactly what data is collected, why, and who has access. Not in a 40-page privacy policy -- in plain language, in context, at the moment of collection.</p>
+          <div class="card-detail">
+            <span class="detail-label">Inverts</span>
+            <span class="detail-value">Opaque data harvesting, buried privacy policies, consent fatigue</span>
+          </div>
+          <div class="card-detail">
+            <span class="detail-label">Used by</span>
+            <span class="detail-value">Apple Privacy Labels, Jumbo Privacy, DuckDuckGo</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="pattern-card" data-category="transparency">
+        <div class="card-body">
+          <div class="card-meta">
+            <span class="card-category-tag">Transparency</span>
+            <span class="card-principle-tag" data-principle="transparent">Transparent</span>
+          </div>
+          <h3 class="card-name">Honest Pricing</h3>
+          <p class="card-description">Show the full cost upfront. No hidden fees revealed at checkout, no bait-and-switch pricing, no confusing tier structures designed to nudge toward the most expensive option.</p>
+          <div class="card-detail">
+            <span class="detail-label">Inverts</span>
+            <span class="detail-value">Drip pricing, hidden fees, confusing tiers, bait-and-switch</span>
+          </div>
+          <div class="card-detail">
+            <span class="detail-label">Used by</span>
+            <span class="detail-value">Basecamp, Pinboard, most ethical SaaS</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="pattern-card" data-category="transparency">
+        <div class="card-body">
+          <div class="card-meta">
+            <span class="card-category-tag">Transparency</span>
+            <span class="card-principle-tag" data-principle="transparent">Transparent</span>
+          </div>
+          <h3 class="card-name">Right to Be Forgotten</h3>
+          <p class="card-description">Enable permanent, complete data deletion with easily discoverable options. When users leave, their data should leave with them -- not persist in backups indefinitely.</p>
+          <div class="card-detail">
+            <span class="detail-label">Inverts</span>
+            <span class="detail-value">Data hoarding, soft-delete only, "we'll keep your data in case you come back"</span>
+          </div>
+          <div class="card-detail">
+            <span class="detail-label">Used by</span>
+            <span class="detail-value">GDPR-compliant services, Signal, ProtonMail</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="pattern-card" data-category="transparency">
+        <div class="card-body">
+          <div class="card-meta">
+            <span class="card-category-tag">Transparency</span>
+            <span class="card-principle-tag" data-principle="transparent">Transparent</span>
+          </div>
+          <h3 class="card-name">Honest Copy</h3>
+          <p class="card-description">Use clear, non-manipulative language in interfaces. "No thanks" instead of "No, I don't want to save money." Never shame the user for declining. Never disguise ads as content.</p>
+          <div class="card-detail">
+            <span class="detail-label">Inverts</span>
+            <span class="detail-value">Confirmshaming, dark copywriting, disguised ads, manipulative CTAs</span>
+          </div>
+          <div class="card-detail">
+            <span class="detail-label">Used by</span>
+            <span class="detail-value">Ethical design guidelines, plainlanguage.gov principles</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="pattern-card" data-category="transparency">
+        <div class="card-body">
+          <div class="card-meta">
+            <span class="card-category-tag">Transparency</span>
+            <span class="card-principle-tag" data-principle="transparent">Transparent</span>
+          </div>
+          <h3 class="card-name">Visible Persuasion</h3>
+          <p class="card-description">When using persuasive design techniques, disclose them. If urgency is real, show the evidence. If scarcity is manufactured, don't pretend it isn't. Persuade honestly or don't persuade.</p>
+          <div class="card-detail">
+            <span class="detail-label">Inverts</span>
+            <span class="detail-value">Fake countdown timers, manufactured scarcity, social proof manipulation</span>
+          </div>
+          <div class="card-detail">
+            <span class="detail-label">Used by</span>
+            <span class="detail-value">Honest e-commerce, FTC enforcement targets</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- ===== BOUNDARIES PATTERNS ===== -->
+
+      <article class="pattern-card" data-category="boundaries">
+        <div class="card-body">
+          <div class="card-meta">
+            <span class="card-category-tag">Boundaries</span>
+            <span class="card-principle-tag" data-principle="respectful">Respectful</span>
+          </div>
+          <h3 class="card-name">Contextual Silence</h3>
+          <p class="card-description">Match notification urgency to context. Don't buzz someone's wrist for a marketing email. Reserve high-interrupt channels (sound, vibration) for genuinely urgent communication.</p>
+          <div class="card-detail">
+            <span class="detail-label">Inverts</span>
+            <span class="detail-value">Every-notification-is-urgent, engagement re-activation pings</span>
+          </div>
+          <div class="card-detail">
+            <span class="detail-label">Used by</span>
+            <span class="detail-value">Apple Focus Modes, Android Priority Mode, Slack DND</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="pattern-card" data-category="boundaries">
+        <div class="card-body">
+          <div class="card-meta">
+            <span class="card-category-tag">Boundaries</span>
+            <span class="card-principle-tag" data-principle="respectful">Respectful</span>
+          </div>
+          <h3 class="card-name">Complete in Notification</h3>
+          <p class="card-description">Include the full message content in the notification itself. Don't force users to open the app just to read a two-sentence comment. Respect the context switch cost.</p>
+          <div class="card-detail">
+            <span class="detail-label">Inverts</span>
+            <span class="detail-value">"Someone commented..." teasers, engagement-bait notifications</span>
+          </div>
+          <div class="card-detail">
+            <span class="detail-label">Used by</span>
+            <span class="detail-value">Email clients, iMessage, Signal</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="pattern-card" data-category="boundaries">
+        <div class="card-body">
+          <div class="card-meta">
+            <span class="card-category-tag">Boundaries</span>
+            <span class="card-principle-tag" data-principle="finite">Finite</span>
+          </div>
+          <h3 class="card-name">Scheduled Delivery</h3>
+          <p class="card-description">Batch non-urgent notifications and deliver them at scheduled times. Morning digest, evening summary -- instead of a constant drip of interruptions throughout the day.</p>
+          <div class="card-detail">
+            <span class="detail-label">Inverts</span>
+            <span class="detail-value">Real-time everything, instant push for every event</span>
+          </div>
+          <div class="card-detail">
+            <span class="detail-label">Used by</span>
+            <span class="detail-value">Hey.com, Inbox When Ready, Apple Scheduled Summary</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="pattern-card" data-category="boundaries">
+        <div class="card-body">
+          <div class="card-meta">
+            <span class="card-category-tag">Boundaries</span>
+            <span class="card-principle-tag" data-principle="respectful">Respectful</span>
+          </div>
+          <h3 class="card-name">Respect the Clock</h3>
+          <p class="card-description">Be aware of time zones and local hours. Never send non-emergency notifications at 3am. Adapt communication rhythm to the user's actual life, not the server's clock.</p>
+          <div class="card-detail">
+            <span class="detail-label">Inverts</span>
+            <span class="detail-value">24/7 notification bombardment, timezone-ignorant alerts</span>
+          </div>
+          <div class="card-detail">
+            <span class="detail-label">Used by</span>
+            <span class="detail-value">Slack quiet hours, iOS Sleep Focus, thoughtful email tools</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="pattern-card" data-category="boundaries">
+        <div class="card-body">
+          <div class="card-meta">
+            <span class="card-category-tag">Boundaries</span>
+            <span class="card-principle-tag" data-principle="finite">Finite</span>
+          </div>
+          <h3 class="card-name">Wind-Down Mode</h3>
+          <p class="card-description">Actively help users transition away from screens before sleep. Dim interfaces, reduce stimulation, suggest stopping, and support the biological need for a technology-free buffer.</p>
+          <div class="card-detail">
+            <span class="detail-label">Inverts</span>
+            <span class="detail-value">Late-night engagement hooks, bright screens at bedtime</span>
+          </div>
+          <div class="card-detail">
+            <span class="detail-label">Used by</span>
+            <span class="detail-value">iOS Night Shift, Android Bedtime mode, Kindle warm light</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- ===== SAFETY PATTERNS ===== -->
+
+      <article class="pattern-card" data-category="safety">
+        <div class="card-body">
+          <div class="card-meta">
+            <span class="card-category-tag">Safety</span>
+            <span class="card-principle-tag" data-principle="resilient">Resilient</span>
+          </div>
+          <h3 class="card-name">Safe Exit</h3>
+          <p class="card-description">Provide a way to quickly hide or exit the application for users in unsafe situations. A panic button that instantly switches to a neutral screen -- critical for domestic violence resources and sensitive services.</p>
+          <div class="card-detail">
+            <span class="detail-label">Inverts</span>
+            <span class="detail-value">Sticky interfaces, "are you sure you want to leave?" prompts</span>
+          </div>
+          <div class="card-detail">
+            <span class="detail-label">Used by</span>
+            <span class="detail-value">Domestic violence hotlines, sensitive health services</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="pattern-card" data-category="safety">
+        <div class="card-body">
+          <div class="card-meta">
+            <span class="card-category-tag">Safety</span>
+            <span class="card-principle-tag" data-principle="resilient">Resilient</span>
+          </div>
+          <h3 class="card-name">Graduated Privacy</h3>
+          <p class="card-description">Let users control their visibility at every level -- from fully public to completely anonymous. Provide routes to anonymity and let people reveal themselves gradually, on their own terms.</p>
+          <div class="card-detail">
+            <span class="detail-label">Inverts</span>
+            <span class="detail-value">Real-name policies, forced visibility, social graph exposure</span>
+          </div>
+          <div class="card-detail">
+            <span class="detail-label">Used by</span>
+            <span class="detail-value">Signal, Reddit, Are.na, Mastodon</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="pattern-card" data-category="safety">
+        <div class="card-body">
+          <div class="card-meta">
+            <span class="card-category-tag">Safety</span>
+            <span class="card-principle-tag" data-principle="resilient">Resilient</span>
+          </div>
+          <h3 class="card-name">Community Shield</h3>
+          <p class="card-description">Empower communities to protect themselves. Provide robust blocking, muting, and moderation tools that let users and communities set their own boundaries against harassment.</p>
+          <div class="card-detail">
+            <span class="detail-label">Inverts</span>
+            <span class="detail-value">Platform-only moderation, slow abuse response, weaponizable features</span>
+          </div>
+          <div class="card-detail">
+            <span class="detail-label">Used by</span>
+            <span class="detail-value">Mastodon, Discord, Block Party, Twitter community notes</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="pattern-card" data-category="safety">
+        <div class="card-body">
+          <div class="card-meta">
+            <span class="card-category-tag">Safety</span>
+            <span class="card-principle-tag" data-principle="resilient">Resilient</span>
+          </div>
+          <h3 class="card-name">Edge Case First</h3>
+          <p class="card-description">Design for the most vulnerable users first, not the average case. When you protect the edge case, you protect everyone. The happy path is not the whole story.</p>
+          <div class="card-detail">
+            <span class="detail-label">Inverts</span>
+            <span class="detail-value">Happy path design, "most users" thinking, willful blindness to abuse</span>
+          </div>
+          <div class="card-detail">
+            <span class="detail-label">Used by</span>
+            <span class="detail-value">Microsoft Inclusive Design, safety-first platforms</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="pattern-card" data-category="safety">
+        <div class="card-body">
+          <div class="card-meta">
+            <span class="card-category-tag">Safety</span>
+            <span class="card-principle-tag" data-principle="resilient">Resilient</span>
+          </div>
+          <h3 class="card-name">Graceful Degradation</h3>
+          <p class="card-description">Design technology that remains useful when it fails. No internet? Offline mode. Server down? Cached data. Battery dying? Essential features only. Failure should reduce, not destroy.</p>
+          <div class="card-detail">
+            <span class="detail-label">Inverts</span>
+            <span class="detail-value">Complete failure on network loss, cloud-only everything, bricked devices</span>
+          </div>
+          <div class="card-detail">
+            <span class="detail-label">Used by</span>
+            <span class="detail-value">Progressive web apps, Notion offline, Git (local-first)</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- ===== CALM PATTERNS ===== -->
+
+      <article class="pattern-card" data-category="calm">
+        <div class="card-body">
+          <div class="card-meta">
+            <span class="card-category-tag">Calm</span>
+            <span class="card-principle-tag" data-principle="respectful">Respectful</span>
+          </div>
+          <h3 class="card-name">Peripheral Awareness</h3>
+          <p class="card-description">Communicate information through ambient cues rather than demanding direct attention. Status lights, subtle sounds, color shifts -- technology that informs the periphery of your awareness without pulling you from your task.</p>
+          <div class="card-detail">
+            <span class="detail-label">Inverts</span>
+            <span class="detail-value">Modal popups, forced attention, center-of-screen alerts</span>
+          </div>
+          <div class="card-detail">
+            <span class="detail-label">Source</span>
+            <span class="detail-value">Calm Technology (Amber Case), Weiser & Brown</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="pattern-card" data-category="calm">
+        <div class="card-body">
+          <div class="card-meta">
+            <span class="card-category-tag">Calm</span>
+            <span class="card-principle-tag" data-principle="respectful">Respectful</span>
+          </div>
+          <h3 class="card-name">Minimum Viable Notification</h3>
+          <p class="card-description">Use the least intrusive channel that still communicates the message. A badge before a banner. A banner before a sound. A sound before a vibration. Technology can communicate without shouting.</p>
+          <div class="card-detail">
+            <span class="detail-label">Inverts</span>
+            <span class="detail-value">Maximum-interrupt notifications, sound+vibration+banner for everything</span>
+          </div>
+          <div class="card-detail">
+            <span class="detail-label">Source</span>
+            <span class="detail-value">Calm Technology communication patterns</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="pattern-card" data-category="calm">
+        <div class="card-body">
+          <div class="card-meta">
+            <span class="card-category-tag">Calm</span>
+            <span class="card-principle-tag" data-principle="respectful">Respectful</span>
+          </div>
+          <h3 class="card-name">Invisible Until Needed</h3>
+          <p class="card-description">Technology should enhance capabilities without disrupting daily life. Stay in the background until actively summoned. The best interface is one you don't notice until you need it.</p>
+          <div class="card-detail">
+            <span class="detail-label">Inverts</span>
+            <span class="detail-value">Always-on dashboards, persistent UI elements, attention-seeking interfaces</span>
+          </div>
+          <div class="card-detail">
+            <span class="detail-label">Source</span>
+            <span class="detail-value">Calm Technology, Humane by Design</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="pattern-card" data-category="calm">
+        <div class="card-body">
+          <div class="card-meta">
+            <span class="card-category-tag">Calm</span>
+            <span class="card-principle-tag" data-principle="respectful">Respectful</span>
+          </div>
+          <h3 class="card-name">Single Purpose</h3>
+          <p class="card-description">Build devices and tools that do one thing well. A reading device that only reads. A writing tool that only writes. Single-purpose design eliminates the temptation to drift.</p>
+          <div class="card-detail">
+            <span class="detail-label">Inverts</span>
+            <span class="detail-value">Swiss-army-knife devices, feature creep, "everything apps"</span>
+          </div>
+          <div class="card-detail">
+            <span class="detail-label">Used by</span>
+            <span class="detail-value">Kindle, reMarkable, Light Phone, Freewrite</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="pattern-card" data-category="calm">
+        <div class="card-body">
+          <div class="card-meta">
+            <span class="card-category-tag">Calm</span>
+            <span class="card-principle-tag" data-principle="respectful">Respectful</span>
+          </div>
+          <h3 class="card-name">Minimum Viable Technology</h3>
+          <p class="card-description">Use the least amount of technology needed to solve the problem. Not every interaction needs an app. Not every app needs AI. Strip to the essential and leave the rest.</p>
+          <div class="card-detail">
+            <span class="detail-label">Inverts</span>
+            <span class="detail-value">Tech-for-tech's-sake, over-engineering, feature bloat</span>
+          </div>
+          <div class="card-detail">
+            <span class="detail-label">Source</span>
+            <span class="detail-value">Calm Technology Principle VII (Amber Case)</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="pattern-card" data-category="calm">
+        <div class="card-body">
+          <div class="card-meta">
+            <span class="card-category-tag">Calm</span>
+            <span class="card-principle-tag" data-principle="respectful">Respectful</span>
+          </div>
+          <h3 class="card-name">Respect Social Norms</h3>
+          <p class="card-description">Technology should behave the way a thoughtful person would in the same context. Don't interrupt dinner. Don't shout in a library. Design with the social awareness of a good guest.</p>
+          <div class="card-detail">
+            <span class="detail-label">Inverts</span>
+            <span class="detail-value">Context-ignorant alerts, socially disruptive notifications</span>
+          </div>
+          <div class="card-detail">
+            <span class="detail-label">Source</span>
+            <span class="detail-value">Calm Technology Principle VIII (Amber Case)</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- ===== ADDITIONAL CROSS-CATEGORY ===== -->
+
+      <article class="pattern-card" data-category="autonomy">
+        <div class="card-body">
+          <div class="card-meta">
+            <span class="card-category-tag">Autonomy</span>
+            <span class="card-principle-tag" data-principle="inclusive">Inclusive</span>
+          </div>
+          <h3 class="card-name">Accessibility as Default</h3>
+          <p class="card-description">Design for disabilities first -- the solutions you find will benefit everyone. Don't disable zoom, preserve font scaling, support screen readers, and let users control animations.</p>
+          <div class="card-detail">
+            <span class="detail-label">Inverts</span>
+            <span class="detail-value">Accessibility as afterthought, disabled zoom, fixed font sizes</span>
+          </div>
+          <div class="card-detail">
+            <span class="detail-label">Used by</span>
+            <span class="detail-value">GOV.UK, Apple ecosystem, WCAG-compliant services</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="pattern-card" data-category="transparency">
+        <div class="card-body">
+          <div class="card-meta">
+            <span class="card-category-tag">Transparency</span>
+            <span class="card-principle-tag" data-principle="empowering">Empowering</span>
+          </div>
+          <h3 class="card-name">Data Portability</h3>
+          <p class="card-description">Let users export their data in standard, usable formats. Your data is yours -- not a hostage held to prevent you from leaving. Interoperability as a design value.</p>
+          <div class="card-detail">
+            <span class="detail-label">Inverts</span>
+            <span class="detail-value">Walled gardens, proprietary formats, lock-in by data capture</span>
+          </div>
+          <div class="card-detail">
+            <span class="detail-label">Used by</span>
+            <span class="detail-value">Notion, Obsidian, Mastodon (ActivityPub), GDPR exports</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="pattern-card" data-category="friction">
+        <div class="card-body">
+          <div class="card-meta">
+            <span class="card-category-tag">Friction</span>
+            <span class="card-principle-tag" data-principle="intentional">Intentional</span>
+          </div>
+          <h3 class="card-name">Accountability Partner</h3>
+          <p class="card-description">Support social accountability structures. Focus rooms, body-doubling, shared blocklists, public commitments. Harness social motivation for intentional use rather than compulsive use.</p>
+          <div class="card-detail">
+            <span class="detail-label">Inverts</span>
+            <span class="detail-value">Isolated willpower, solo struggle against engagement machines</span>
+          </div>
+          <div class="card-detail">
+            <span class="detail-label">Used by</span>
+            <span class="detail-value">Focusmate, Flow Club, Beeminder, StickK</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="pattern-card" data-category="attention">
+        <div class="card-body">
+          <div class="card-meta">
+            <span class="card-category-tag">Attention</span>
+            <span class="card-principle-tag" data-principle="empowering">Empowering</span>
+          </div>
+          <h3 class="card-name">Feed Elimination</h3>
+          <p class="card-description">Replace algorithmic feeds with intentional search or curated collections. Instead of being shown content, let users seek it. The feed is the attention trap -- remove the trap entirely.</p>
+          <div class="card-detail">
+            <span class="detail-label">Inverts</span>
+            <span class="detail-value">Algorithmic feeds, recommended content, autoplay queues</span>
+          </div>
+          <div class="card-detail">
+            <span class="detail-label">Used by</span>
+            <span class="detail-value">Are.na, Wikipedia, RSS readers, News Feed Eradicator</span>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ======== Reading List ======== -->
+  <section class="reading-section" id="reading">
+    <div class="reading-header">
+      <h2 class="section-title">Essential Reading</h2>
+      <p class="section-subtitle">The intellectual foundations of humane design</p>
+    </div>
+    <div class="reading-grid">
+      <div class="reading-card">
+        <h3>Calm Technology</h3>
+        <p class="reading-author">Amber Case</p>
+        <p class="reading-desc">Principles and patterns for non-intrusive design. The foundational text on technology that respects attention.</p>
+      </div>
+      <div class="reading-card">
+        <h3>Stand Out of Our Light</h3>
+        <p class="reading-author">James Williams</p>
+        <p class="reading-desc">Freedom and resistance in the attention economy. A philosopher's case for why attention is a moral issue.</p>
+      </div>
+      <div class="reading-card">
+        <h3>Digital Minimalism</h3>
+        <p class="reading-author">Cal Newport</p>
+        <p class="reading-desc">A philosophy of technology use focused on supporting the things you value, not on maximizing engagement.</p>
+      </div>
+      <div class="reading-card">
+        <h3>How to Do Nothing</h3>
+        <p class="reading-author">Jenny Odell</p>
+        <p class="reading-desc">Resisting the attention economy. Attention as an act of resistance, place-based thinking, and bioregional awareness.</p>
+      </div>
+      <div class="reading-card">
+        <h3>Indistractable</h3>
+        <p class="reading-author">Nir Eyal</p>
+        <p class="reading-desc">From the author of Hooked -- now the counter-playbook. Understanding triggers, making pacts, and designing your environment.</p>
+      </div>
+      <div class="reading-card">
+        <h3>Irresistible</h3>
+        <p class="reading-author">Adam Alter</p>
+        <p class="reading-desc">The rise of addictive technology and the business of keeping us hooked. Understanding the mechanics to resist them.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== Footer ======== -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="footer-title">Humane Design Patterns</span>
+        <span class="footer-tagline">A pattern language for technology that respects people. Open source, always evolving.</span>
+      </div>
+      <div class="footer-links">
+        <p class="footer-note">
+          Inspired by <a href="https://humanebydesign.com" target="_blank" rel="noopener">Humane by Design</a>,
+          <a href="https://calmtech.com" target="_blank" rel="noopener">Calm Technology</a>,
+          <a href="https://designpatternsformentalhealth.org" target="_blank" rel="noopener">Design Patterns for Mental Health</a>,
+          and the <a href="https://www.humanetech.com" target="_blank" rel="noopener">Center for Humane Technology</a>.
+        </p>
+        <p class="footer-copyright">
+          <a href="https://github.com/welfvh/humane-design-patterns" target="_blank" rel="noopener">View on GitHub</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll to top -->
+  <button class="scroll-top" aria-label="Scroll to top">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="18 15 12 9 6 15"/>
+    </svg>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>
